@@ -142,6 +142,7 @@ body {
   height: 420px;
   object-fit: cover;
   border-radius: 160px 0 0 160px;
+  pointer-events: none;
 }
 
 .btn {
