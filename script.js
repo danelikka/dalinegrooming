@@ -12,3 +12,15 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
     menuBtn.innerHTML = "☰";
   });
 });
+
+document.querySelectorAll('a[href*="dalinegrooming.reservio.com"]').forEach((button) => {
+  button.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18275674654/Zi3WCLnYrZUdEJ7UwopE',
+        'value': 1.0,
+        'currency': 'EUR',
+      });
+    }
+  });
+});
