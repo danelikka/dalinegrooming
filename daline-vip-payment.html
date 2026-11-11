@@ -1,0 +1,536 @@
+<!doctype html>
+
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>VIP objednávka | DalineGrooming</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+
+        background: #f8f5f0;
+
+        color: #604737;
+
+        font-family: Montserrat, sans-serif;
+      }
+
+      header {
+        padding: 22px 7%;
+
+        background: white;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+      }
+
+      .logo {
+        font-family: "Cormorant SC", serif;
+
+        font-size: 25px;
+
+        font-weight: 700;
+
+        text-decoration: none;
+
+        color: #604737;
+      }
+
+      .back {
+        color: #604737;
+
+        text-decoration: none;
+
+        font-size: 13px;
+      }
+
+      main {
+        max-width: 680px;
+
+        margin: 45px auto;
+
+        padding: 0 18px;
+      }
+
+      .form-card {
+        background: white;
+
+        border-radius: 20px;
+
+        padding: 38px;
+      }
+
+      .eyebrow {
+        color: #a78670;
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        text-align: center;
+      }
+
+      h1 {
+        font-family: "Cormorant SC", serif;
+
+        font-size: 48px;
+
+        text-align: center;
+
+        margin: 12px 0;
+      }
+
+      .intro {
+        text-align: center;
+
+        color: #88776c;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        margin: 18px 0 8px;
+      }
+
+      input,
+      select {
+        width: 100%;
+
+        padding: 15px;
+
+        border: 1px solid #ded1c6;
+
+        border-radius: 9px;
+
+        background: white;
+
+        color: #604737;
+
+        font-family: inherit;
+
+        font-size: 14px;
+      }
+
+      input:focus,
+      select:focus {
+        outline: 2px solid #a78670;
+
+        outline-offset: 1px;
+      }
+
+      .summary {
+        background: #f2e8df;
+
+        padding: 22px;
+
+        border-radius: 13px;
+
+        margin-top: 30px;
+      }
+
+      .summary-row {
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 15px;
+
+        margin: 12px 0;
+
+        font-size: 13px;
+      }
+
+      .summary hr {
+        border: 0;
+
+        border-top: 1px solid #d7c5b6;
+
+        margin: 18px 0;
+      }
+
+      .total {
+        font-weight: 700;
+
+        font-size: 18px;
+      }
+
+      .free {
+        color: #7e604c;
+
+        font-size: 12px;
+
+        margin-bottom: 0;
+      }
+
+      button {
+        width: 100%;
+
+        background: #896858;
+
+        color: white;
+
+        padding: 17px;
+
+        border: 0;
+
+        border-radius: 9px;
+
+        font-family: inherit;
+
+        font-weight: 600;
+
+        cursor: pointer;
+
+        margin-top: 25px;
+      }
+
+      button:hover {
+        background: #705344;
+      }
+
+      .note {
+        font-size: 12px;
+
+        color: #88776c;
+
+        line-height: 1.7;
+
+        text-align: center;
+      }
+
+      .message {
+        font-size: 13px;
+
+        line-height: 1.6;
+
+        text-align: center;
+
+        color: #604737;
+      }
+
+      footer {
+        text-align: center;
+
+        padding: 30px;
+
+        font-size: 12px;
+
+        color: #88776c;
+      }
+
+      @media (max-width: 600px) {
+        .form-card {
+          padding: 24px 20px;
+        }
+
+        h1 {
+          font-size: 39px;
+        }
+
+        .back {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="index.html">🐾 DalineGrooming</a>
+
+      <a class="back" href="daline-vip.html">← Späť na VIP</a>
+    </header>
+
+    <main>
+      <section class="form-card">
+        <div class="eyebrow">DALINE VIP · 5 + 1</div>
+
+        <h1>Vaša VIP karta</h1>
+
+        <p class="intro">
+          Vyplňte údaje a vyberte si procedúru. Cena VIP balíčka sa vypočíta
+          automaticky.
+        </p>
+
+        <form id="vipForm">
+          <label for="firstName">Meno</label>
+
+          <input
+            id="firstName"
+            name="firstName"
+            type="text"
+            placeholder="Vaše meno"
+            autocomplete="given-name"
+            required
+          />
+
+          <label for="lastName">Priezvisko</label
+          ><input
+            id="lastName"
+            name="lastName"
+            type="text"
+            placeholder="Vaše priezvisko"
+            autocomplete="family-name"
+            required
+          />
+
+          <label for="petName">Meno miláčika</label>
+
+          <input
+            id="petName"
+            name="petName"
+            type="text"
+            placeholder="Meno vášho miláčika"
+            required
+          />
+
+          <label for="email">E-mail</label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="vas@email.sk"
+            autocomplete="email"
+            required
+          />
+
+          <label for="category">Kategória služby</label>
+
+          <select id="category" required>
+            <option value="">Vyberte kategóriu</option>
+
+            <option value="grooming">Komplexný grooming</option>
+
+            <option value="bathing">Kúpanie a starostlivosť</option>
+
+            <option value="hygiene">Hygienický balíček</option>
+
+            <option value="brushing">Vyčesávanie srsti</option>
+
+            <option value="cats">Služby pre mačky</option>
+          </select>
+
+          <label for="service">Vyberte si procedúru</label>
+
+          <select id="service" required disabled>
+            <option value="">Najprv vyberte kategóriu</option>
+          </select>
+
+          <div class="summary">
+            <div class="summary-row">
+              <span>Cena jednej procedúry</span>
+
+              <strong id="unitPrice">0 €</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>5 predplatených procedúr</span>
+
+              <strong id="fivePrice">0 €</strong>
+            </div>
+
+            <hr />
+
+            <div class="summary-row total">
+              <span>Celková cena VIP</span>
+
+              <span id="totalPrice">0 €</span>
+            </div>
+
+            <p class="free">✓ 6. procedúra zdarma</p>
+          </div>
+
+          <button type="submit">Pokračovať k platbe →</button>
+
+          <p class="note">Online platba cez Stripe bude dostupná čoskoro.</p>
+
+          <p class="message" id="status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>© DalineGrooming · Trenčín</footer>
+
+    <script>
+      // Ceny podľa aktuálneho cenníka DalineGrooming.
+
+      const services = {
+        grooming: [
+          { id: "groom-small", name: "Malý pes", price: 35 },
+
+          { id: "groom-medium", name: "Stredný pes", price: 45 },
+
+          { id: "groom-large", name: "Veľký pes", price: 60 },
+        ],
+
+        bathing: [
+          { id: "bath-small", name: "Malý pes", price: 20 },
+
+          { id: "bath-medium", name: "Stredný pes", price: 30 },
+
+          { id: "bath-large", name: "Veľký pes", price: 40 },
+        ],
+
+        hygiene: [
+          { id: "hygiene-small", name: "Malý pes", price: 25 },
+
+          { id: "hygiene-medium", name: "Stredný pes", price: 35 },
+
+          { id: "hygiene-large", name: "Veľký pes", price: 45 },
+        ],
+
+        brushing: [
+          { id: "brush-small", name: "Malý pes", price: 15 },
+
+          { id: "brush-medium", name: "Stredný pes", price: 20 },
+
+          { id: "brush-large", name: "Veľký pes", price: 35 },
+        ],
+
+        cats: [
+          { id: "cat-shedding", name: "Expresné pĺznutie", price: 40 },
+
+          { id: "cat-brushing", name: "Vyčesávanie", price: 20 },
+
+          { id: "cat-nails", name: "Strihanie pazúrikov", price: 5 },
+
+          { id: "cat-grooming", name: "Komplexný grooming", price: 35 },
+        ],
+      };
+
+      const category = document.getElementById("category");
+
+      const service = document.getElementById("service");
+
+      const unitPrice = document.getElementById("unitPrice");
+
+      const fivePrice = document.getElementById("fivePrice");
+
+      const totalPrice = document.getElementById("totalPrice");
+
+      const status = document.getElementById("status");
+
+      function updatePrice() {
+        const items = services[category.value] || [];
+
+        const selected = items.find((item) => item.id === service.value);
+
+        const price = selected ? selected.price : 0;
+
+        unitPrice.textContent = price + " €";
+
+        fivePrice.textContent = price * 5 + " €";
+
+        totalPrice.textContent = price * 5 + " €";
+      }
+
+      category.addEventListener("change", function () {
+        const items = services[category.value] || [];
+
+        service.innerHTML = "";
+
+        const placeholder = document.createElement("option");
+
+        placeholder.value = "";
+
+        placeholder.textContent = "Vyberte procedúru";
+
+        service.appendChild(placeholder);
+
+        items.forEach((item) => {
+          const option = document.createElement("option");
+
+          option.value = item.id;
+
+          option.textContent = item.name + " — " + item.price + " €";
+
+          service.appendChild(option);
+        });
+
+        service.disabled = items.length === 0;
+
+        updatePrice();
+
+        status.textContent = "";
+      });
+
+      service.addEventListener("change", function () {
+        updatePrice();
+
+        status.textContent = "";
+      });
+      const WORKER_URL = "https://daline-vip-checkout.bogdanka1833.workers.dev";
+
+      document
+        .getElementById("vipForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const button = this.querySelector('button[type="submit"]');
+
+          button.disabled = true;
+          button.textContent = "Pripravujeme platbu...";
+          status.textContent = "";
+
+          try {
+            const response = await fetch(WORKER_URL + "/create-checkout", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                firstName: document.getElementById("firstName").value,
+                lastName: document.getElementById("lastName").value,
+                petName: document.getElementById("petName").value,
+                email: document.getElementById("email").value,
+                serviceId: service.value,
+              }),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || !result.url) {
+              throw new Error(
+                result.error || "Platbu sa nepodarilo pripraviť.",
+              );
+            }
+
+            window.location.assign(result.url);
+          } catch (error) {
+            status.textContent =
+              error.message || "Nastala chyba. Skúste to znova.";
+
+            button.disabled = false;
+            button.textContent = "Pokračovať k platbe →";
+          }
+        });
+    </script>
+  </body>
+</html>

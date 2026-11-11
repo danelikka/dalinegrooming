@@ -1,0 +1,408 @@
+<!doctype html>
+
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Daline Club | DalineGrooming</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        background: #f8f5f0;
+        color: #4d392f;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+      }
+
+      /* HEADER */
+      .club-header {
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #e8ded4;
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .club-logo {
+        font-family: "Cormorant SC", Georgia, serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: #604737;
+        text-decoration: none;
+      }
+
+      .back-link {
+        color: #8e715e;
+        font-size: 12px;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      /* PAGE CONTAINER */
+      .club-container {
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 40px 18px 70px;
+      }
+
+      /* INTRO */
+      .club-intro {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 26px;
+      }
+
+      .club-intro span {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #a1836b;
+      }
+
+      .club-intro h1 {
+        font-family: "Cormorant SC", Georgia, serif;
+        font-size: clamp(40px, 9vw, 54px);
+        line-height: 1.1;
+        margin: 12px 0;
+        color: #4d392f;
+      }
+
+      .club-intro p {
+        max-width: 410px;
+        margin: 0 auto;
+        font-size: 13px;
+        line-height: 1.8;
+        color: #847368;
+      }
+
+      /* BENEFITS CARD */
+      .club-benefits {
+        width: 100%;
+        background: #eee3d8;
+        border: 1px solid #e1d2c3;
+        border-radius: 18px;
+        padding: 26px 24px;
+        margin-bottom: 22px;
+      }
+
+      .club-benefits h2 {
+        font-family: "Cormorant SC", Georgia, serif;
+        font-size: 29px;
+        color: #604737;
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .club-benefits p {
+        font-size: 13px;
+        color: #665346;
+        line-height: 1.7;
+        padding: 10px 0;
+        margin: 0;
+        border-bottom: 1px solid #dccbbd;
+      }
+
+      .club-benefits p:last-child {
+        border-bottom: none;
+      }
+
+      /* REGISTRATION CARD */
+      .club-form {
+        width: 100%;
+        display: block;
+        background: #fff;
+        border: 1px solid #eee5dc;
+        border-radius: 18px;
+        padding: 28px 24px;
+        box-shadow: 0 6px 25px rgba(60, 40, 30, 0.05);
+      }
+
+      .club-form h2 {
+        font-family: "Cormorant SC", Georgia, serif;
+        font-size: 29px;
+        line-height: 1.2;
+        color: #4d392f;
+        text-align: center;
+        margin: 0 0 24px;
+      }
+
+      /* FORM FIELDS */
+      .club-form > label:not(.club-consent) {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        color: #705849;
+        margin: 16px 0 8px;
+      }
+
+      .club-form input:not([type="checkbox"]) {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 14px;
+        border: 1px solid #dfd3c7;
+        border-radius: 9px;
+        background: #fdfbf9;
+        color: #4d392f;
+        font-family: inherit;
+        font-size: 14px;
+      }
+
+      .club-form input:focus {
+        outline: 2px solid #c7aa92;
+        outline-offset: 1px;
+      }
+
+      /* CONSENT - FIXED */
+      .club-form .club-consent {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        width: 100%;
+        gap: 12px;
+        margin: 24px 0 !important;
+        padding: 0;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #75665a;
+        text-align: left;
+      }
+
+      .club-form .club-consent input[type="checkbox"] {
+        appearance: auto;
+        display: block;
+        flex: 0 0 17px;
+        width: 17px !important;
+        height: 17px !important;
+        min-width: 17px;
+        margin: 2px 0 0;
+        padding: 0;
+        accent-color: #a78670;
+      }
+
+      .club-form .club-consent span {
+        display: block;
+        flex: 1 1 0;
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      /* BUTTON */
+      .club-form button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        background: #a78670;
+        color: #fff;
+        border: none;
+        border-radius: 9px;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .club-form button[type="submit"]:hover {
+        background: #8d6c56;
+      }
+
+      .club-note {
+        text-align: center;
+        font-size: 11px;
+        line-height: 1.7;
+        color: #97877b;
+        margin: 18px 0 0;
+      }
+
+      #clubStatus {
+        text-align: center;
+        font-size: 12px;
+      }
+
+      /* MOBILE */
+      @media (max-width: 600px) {
+        .club-header {
+          padding: 17px 18px;
+        }
+
+        .club-logo {
+          font-size: 20px;
+        }
+
+        .club-container {
+          padding: 30px 16px 50px;
+        }
+
+        .club-benefits {
+          padding: 22px 20px;
+        }
+
+        .club-form {
+          padding: 25px 20px;
+        }
+
+        .club-form h2 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="club-header">
+      <a href="index.html" class="club-logo"> 🐾 DalineGrooming </a>
+
+      <a href="index.html#loyalty" class="back-link"> ← Späť </a>
+    </header>
+
+    <main class="club-container">
+      <div class="club-intro">
+        <span>VERNOSTNÝ PROGRAM</span>
+        <h1>Daline Club</h1>
+
+        <p>
+          Staňte sa členom nášho vernostného klubu úplne zdarma a užívajte si
+          výhody pri starostlivosti o svojho miláčika.
+        </p>
+      </div>
+
+      <div class="club-benefits">
+        <h2>Vaše výhody</h2>
+
+        <p>✓ Registrácia úplne zdarma</p>
+
+        <p>✓ 5 návštev za bežnú cenu</p>
+
+        <p>✓ 6. procedúra so zľavou 50 %</p>
+
+        <p>✓ Platnosť karty 12 mesiacov</p>
+
+        <p>✓ Fyzická karta pri návšteve salónu</p>
+      </div>
+
+      <form
+        class="club-form"
+        id="clubForm"
+        action="https://formspree.io/f/xzerbgjo"
+        method="POST"
+      >
+        <input type="hidden" name="membership" value="Daline Club" />
+        <h2>Získajte svoju Club kartu</h2>
+
+        <label for="firstName">Meno</label>
+
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          autocomplete="given-name"
+          placeholder="Vaše meno"
+          required
+        />
+
+        <label for="lastName">Priezvisko</label>
+
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          autocomplete="family-name"
+          placeholder="Vaše priezvisko"
+          required
+        />
+
+        <label for="email">E-mail</label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          placeholder="vas@email.sk"
+          required
+        />
+
+        <label class="club-consent">
+          <input type="checkbox" name="termsAccepted" value="yes" required />
+          <span>
+            Potvrdzujem, že som sa oboznámil/a s podmienkami členstva a
+            informáciami o spracúvaní osobných údajov.
+          </span>
+        </label>
+
+        <button type="submit">Registrovať sa zdarma</button>
+
+        <p id="clubStatus" role="status" aria-live="polite"></p>
+
+        <p class="club-note">
+          Vaša karta bude pripravená na vyzdvihnutie pri návšteve salónu.
+        </p>
+      </form>
+    </main>
+    <script>
+      const clubForm = document.getElementById("clubForm");
+      const clubStatus = document.getElementById("clubStatus");
+
+      clubForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const button = clubForm.querySelector('button[type="submit"]');
+
+        button.disabled = true;
+        button.textContent = "Odosielanie...";
+        clubStatus.textContent = "";
+
+        try {
+          const response = await fetch(clubForm.action, {
+            method: "POST",
+            body: new FormData(clubForm),
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            window.location.href = "daline-success.html";
+          } else {
+            clubStatus.textContent =
+              "Registráciu sa nepodarilo odoslať. Skúste to znova.";
+          }
+        } catch (error) {
+          clubStatus.textContent = "Nastala chyba pripojenia. Skúste to znova.";
+        } finally {
+          button.disabled = false;
+          button.textContent = "Registrovať sa zdarma";
+        }
+      });
+    </script>
+  </body>
+</html>
