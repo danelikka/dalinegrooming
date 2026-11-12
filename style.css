@@ -508,3 +508,366 @@ footer p {
     font-size: 20px;
   }
 }
+
+/* DALINE LOYALTY */
+.daline-loyalty {
+  padding: 85px 20px;
+  background: #f7f1e9;
+  color: #49372d;
+}
+
+.loyalty-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.loyalty-eyebrow {
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: #9b7c65;
+}
+
+.loyalty-heading h2 {
+  font-family: "Cormorant SC", Georgia, serif;
+  font-size: clamp(36px, 5vw, 54px);
+  margin: 12px 0;
+}
+
+.loyalty-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.loyalty-card {
+  padding: 42px 35px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 35px rgba(50, 30, 20, .08);
+}
+
+.loyalty-club {
+  background: #fff;
+}
+
+.loyalty-vip {
+  background: #493329;
+  color: #fff5e9;
+}
+
+.loyalty-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: .75;
+}
+
+.loyalty-card h3 {
+  font-family: "Cormorant SC", Georgia, serif;
+  font-size: 34px;
+  margin: 18px 0 8px;
+}
+
+.loyalty-offer {
+  font-size: 52px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.loyalty-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 35px;
+  flex: 1;
+}
+
+.loyalty-card li {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(150, 120, 90, .2);
+}
+
+.loyalty-card li::before {
+  content: "✓ ";
+  margin-right: 8px;
+}
+
+.loyalty-btn,
+.loyalty-submit {
+  background: #b99577;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 16px 20px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.loyalty-btn:hover,
+.loyalty-submit:hover {
+  background: #a47c5c;
+}
+
+.loyalty-modal[hidden],
+#loyaltyVipFields[hidden] {
+  display: none !important;
+}
+
+.loyalty-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(25, 18, 14, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loyalty-modal-panel {
+  position: relative;
+  width: min(100%, 480px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fffaf5;
+  color: #49372d;
+  border-radius: 18px;
+  padding: 35px;
+}
+
+.loyalty-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: transparent;
+  border: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#loyaltyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#loyaltyForm input:not([type="checkbox"]),
+#loyaltyForm select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #d8c8b8;
+  border-radius: 8px;
+  background: #fff;
+  color: #49372d;
+  font: inherit;
+}
+
+.loyalty-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.loyalty-price {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .daline-loyalty { padding: 55px 16px; }
+  .loyalty-cards { grid-template-columns: 1fr; }
+  .loyalty-card { padding: 30px 24px; }
+  .loyalty-modal-panel { padding: 28px 20px; }
+}
+/* COMPACT DALINE LOYALTY */
+.daline-loyalty {
+  padding: 55px 20px;
+  background: #faf7f3;
+}
+
+.loyalty-heading {
+  margin-bottom: 25px;
+}
+
+.loyalty-heading h2 {
+  font-size: clamp(29px, 4vw, 40px);
+}
+
+.loyalty-cards {
+  max-width: 850px;
+  gap: 18px;
+}
+
+.loyalty-card {
+  padding: 28px 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(60, 40, 30, .05);
+  border: 1px solid #e9ded4;
+}
+
+.loyalty-club {
+  background: #ffffff;
+  color: #4d392f;
+}
+
+.loyalty-vip {
+  background: #f1e6dc;
+  color: #4d392f;
+}
+
+.loyalty-card h3 {
+  font-size: 28px;
+  margin: 12px 0 5px;
+}
+
+.loyalty-offer {
+  font-size: 40px;
+  color: #9a7862;
+  margin-top: 5px;
+}
+
+.loyalty-card ul {
+  margin: 18px 0 25px;
+}
+
+.loyalty-card li {
+  font-size: 13px;
+  padding: 7px 0;
+}
+
+.loyalty-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 13px 16px;
+  font-size: 13px;
+  background: #a78670;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.loyalty-club .loyalty-btn {
+  background: #e9ded3;
+  color: #604737;
+}
+
+@media (max-width: 700px) {
+  .daline-loyalty {
+    padding: 40px 16px;
+  }
+
+  .loyalty-cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: auto;
+  }
+
+  .loyalty-card {
+    padding: 24px;
+  }
+
+  .loyalty-card h3 {
+    font-size: 26px;
+  }
+
+  .loyalty-offer {
+    font-size: 36px;
+  }
+}
+/* DALINE CLUB & VIP — COMPACT DESIGN */
+
+.daline-loyalty {
+  padding: 24px 16px 20px;
+  background: #faf7f3;
+}
+
+.loyalty-heading {
+  margin-bottom: 18px;
+}
+
+.loyalty-heading h2 {
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.1;
+  margin: 8px 0;
+}
+
+.loyalty-heading p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.loyalty-cards {
+  max-width: 760px;
+  gap: 12px;
+}
+
+.loyalty-card {
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 0;
+  box-shadow: 0 3px 12px rgba(60, 40, 30, 0.04);
+}
+
+.loyalty-club,
+.loyalty-vip {
+  background: #f1e8df;
+  color: #49372d;
+}
+
+.loyalty-card h3 {
+  font-size: 25px;
+  margin: 8px 0 4px;
+}
+
+.loyalty-offer {
+  font-size: 34px;
+  margin-top: 4px;
+}
+
+.loyalty-card p {
+  font-size: 12px;
+}
+
+.loyalty-card ul {
+  margin: 12px 0 16px;
+}
+
+.loyalty-card li {
+  font-size: 12px;
+  padding: 5px 0;
+  line-height: 1.4;
+}
+
+.loyalty-btn {
+  padding: 11px 14px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .daline-loyalty {
+    padding: 22px 16px 18px;
+  }
+
+  .loyalty-cards {
+    max-width: 360px;
+    gap: 12px;
+  }
+
+  .loyalty-card {
+    padding: 18px;
+  }
+
+  .loyalty-heading h2 {
+    font-size: 27px;
+  }
+}
+/* Відступ між VIP-картками та послугами */
+.daline-loyalty {
+  margin-bottom: 35px;
+}
