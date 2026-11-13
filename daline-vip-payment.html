@@ -257,6 +257,43 @@
           font-size: 11px;
         }
       }
+      /* Daline VIP – legal links */
+      .vip-consent {
+        margin: 20px 0;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #49382e;
+      }
+
+      .vip-consent label {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        cursor: pointer;
+      }
+
+      .vip-consent input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        margin-top: 2px;
+        accent-color: #795844;
+      }
+
+      .vip-consent a {
+        color: #795844;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .vip-consent a:hover {
+        color: #49382e;
+      }
+
+      .vip-legal-links {
+        margin: 10px 0 0 28px;
+        font-size: 12px;
+      }
     </style>
   </head>
 
@@ -366,10 +403,46 @@
 
             <p class="free">✓ 6. procedúra zdarma</p>
           </div>
+          <div class="vip-consent">
+            <label for="acceptTerms">
+              <input
+                type="checkbox"
+                id="acceptTerms"
+                name="acceptTerms"
+                required
+              />
+              <span>
+                Oboznámil/a som sa s
+                <a
+                  href="obchodne-podmienky.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  obchodnými podmienkami
+                </a>
+                a podmienkami programu Daline VIP.
+              </span>
+            </label>
 
+            <p class="vip-legal-links">
+              <a
+                href="ochrana-osobnych-udajov.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ochrana osobných údajov
+              </a>
+              ·
+              <a
+                href="reklamacny-poriadok.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Reklamačný poriadok a odstúpenie od zmluvy
+              </a>
+            </p>
+          </div>
           <button type="submit">Pokračovať k platbe →</button>
-
-          <p class="note">Online platba cez Stripe bude dostupná čoskoro.</p>
 
           <p class="message" id="status" role="status"></p>
         </form>
@@ -492,7 +565,12 @@
         .getElementById("vipForm")
         .addEventListener("submit", async function (event) {
           event.preventDefault();
+          const acceptTerms = document.getElementById("acceptTerms");
 
+          if (!acceptTerms.checked) {
+            acceptTerms.reportValidity();
+            return;
+          }
           const button = this.querySelector('button[type="submit"]');
 
           button.disabled = true;
