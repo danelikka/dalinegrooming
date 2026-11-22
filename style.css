@@ -871,3 +871,186 @@ footer p {
 .daline-loyalty {
   margin-bottom: 35px;
 }
+/* DALINEGROOMING – CENNÍK PSOV */
+
+.daline-pricing {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 20px;
+  color: #49372d;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.daline-pricing-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.daline-subtitle {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #a18a78;
+}
+
+.daline-pricing-header h2 {
+  font-family: 'Cormorant SC', serif;
+  font-size: 38px;
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+.daline-pricing-header p {
+  color: #857467;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.daline-service-card {
+  background: #faf6f1;
+  border: 1px solid #e8ddd2;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.daline-service-card h3 {
+  font-family: 'Cormorant SC', serif;
+  font-size: 29px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.daline-service-description {
+  text-align: center;
+  font-size: 13px;
+  color: #857467;
+  line-height: 1.8;
+  margin: 0 0 25px;
+}
+
+.daline-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5d8ca;
+}
+
+.daline-price-row:last-of-type {
+  border-bottom: none;
+}
+
+.daline-price-row span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.daline-price-row small {
+  display: block;
+  color: #958275;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.daline-price-row strong {
+  color: #785743;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.daline-extra-note {
+  font-size: 12px;
+  color: #857467;
+  line-height: 1.8;
+  margin-top: 18px;
+}
+
+.daline-pricing-info {
+  background: #f2e9df;
+  padding: 25px;
+  border-radius: 18px;
+  margin-top: 30px;
+}
+
+.daline-pricing-info h3 {
+  font-family: 'Cormorant SC', serif;
+  font-size: 26px;
+  margin: 0 0 15px;
+}
+
+.daline-pricing-info p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #68574c;
+  margin: 0 0 12px;
+}
+
+.daline-pricing-info p:last-child {
+  margin-bottom: 0;
+}
+
+.daline-booking-button {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 35px auto 0;
+  padding: 16px 38px;
+  background: #785743;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: background 0.3s ease,
+              transform 0.3s ease;
+}
+
+.daline-booking-button:hover {
+  background: #53392b;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .daline-pricing {
+    margin: 30px auto;
+    padding: 12px;
+  }
+
+  .daline-pricing-header h2 {
+    font-size: 30px;
+  }
+
+  .daline-service-card {
+    padding: 23px 18px;
+    border-radius: 16px;
+  }
+
+  .daline-service-card h3 {
+    font-size: 26px;
+  }
+
+  .daline-price-row {
+    gap: 12px;
+  }
+
+  .daline-price-row span {
+    font-size: 13px;
+  }
+
+  .daline-price-row strong {
+    font-size: 14px;
+  }
+
+  .daline-pricing-info {
+    padding: 20px;
+  }
+}
